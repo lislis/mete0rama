@@ -97,6 +97,7 @@ void handleData() {
   doc["rain"] = analogRead(RAINPIN) * VOLTAGE / 1024; // in V
   String payload;
   serializeJson(doc, payload);
+  server.sendHeader("Access-Control-Allow-Origin", "*");
   server.send(200, "application/json", payload);
 }
 
