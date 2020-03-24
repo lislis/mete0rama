@@ -14,8 +14,7 @@ new Vue({
     axios
       .get('http://192.168.178.42/data')
       .then(response => {
-        console.log('It is very warm: ' + response.data.temperature)
-        store.commit('updateMeasurements', response.data)
+        store.commit('updateMeasurements', response.data.data)
       })
   },
 
