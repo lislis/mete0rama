@@ -90,11 +90,28 @@ void handleRoot() {
 
 void handleData() {
   StaticJsonDocument<500> doc;  
-  doc["temperature"] = bme.readTemperature(); // in ^C
-  doc["humidity"] = bme.readHumidity(); // in %
-  doc["pressure"] = (bme.readPressure() / 100.0F); // in hPa
-  doc["altitude"] = bme.readAltitude(SEALEVELPRESSURE_HPA); // in m
-  doc["rain"] = analogRead(RAINPIN) * VOLTAGE / 1024; // in V
+  JsonArray arr = doc.createNestedArray("data");
+  JsonObject tObj = arr.createNestedObject();
+  tObj["type"] = "temperature";
+  tObj["value"] = bme.readTemperature();
+  tObj["unit"] = "°C";
+  JsonObject hObj = arr.createNestedObject();
+  hObj["type"] = "humidity";
+  hObj["value"] = bme.readHumidity();
+  hObj["unit"] = "%";
+  JsonObject pObj = arr.createNestedObject();
+  pObj["type"] = "barometric_pressure";
+  pObj["value"] = (bme.readPressure() / 100.0F);
+  pObj["unit"] = "hPa";
+  JsonObject aObj = arr.createNestedObject();
+  aObj["type"] = "altitude";
+  aObj["value"] = bme.readAltitude(SEALEVELPRESSURE_HPA);
+  aObj["unit"] = "m";
+  JsonObject rObj = arr.createNestedObject();
+  rObj["type"] = "rain";
+  rObj["value"] = analogRead(RAINPIN) * VOLTAGE / 1024;
+  rObj["unit"] = "V";
+ 
   String payload;
   serializeJson(doc, payload);
   server.sendHeader("Access-Control-Allow-Origin", "*");
