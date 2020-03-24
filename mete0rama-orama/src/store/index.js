@@ -5,8 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    measurements: {}
   },
   mutations: {
+    updateMeasurements (state, measurements) {
+      state.measurements = measurements
+    }
   },
   actions: {
   },
