@@ -1,12 +1,24 @@
-# Mete0rama-orama
+# mete0rama-orama
 
-tbd
+## Project setup
+```
+yarn install
+```
 
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
 
+### Compiles and minifies for production
+```
+yarn build
+```
 
+### Lints and fixes files
+```
+yarn lint
+```
 
-Feinstaubsensor
-ID: 6982025
-MAC: CC:50:E3:6A:89:89
-Firmware: NRZ-2020-129
-(Jan 7 2020 13:40:51)
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
