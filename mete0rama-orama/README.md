@@ -22,3 +22,7 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Icons from FontAwesome
+
+[fontawesome.com](https://fontawesome.com/icons?d=gallery&m=free)
