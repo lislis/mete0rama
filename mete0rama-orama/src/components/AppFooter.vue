@@ -7,7 +7,8 @@
 </template>
 
 <style scoped lang="scss">
-  .appfooter {
+.appfooter {
+  margin-top: 10vh;
   font-size: 1.3rem;
   color: #ccc;
   }
