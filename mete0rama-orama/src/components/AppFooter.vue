@@ -10,10 +10,10 @@
 .appfooter {
   margin-top: 10vh;
   font-size: 1.3rem;
-  color: #ccc;
+  color: #999;
   }
 
   a {
-  color: #999;
+  color: #666;
   }
 </style>
