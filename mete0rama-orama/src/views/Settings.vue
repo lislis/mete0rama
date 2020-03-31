@@ -22,12 +22,6 @@ export default {
   .settings-note {
     padding: 0.8rem;
     background-color: #ccc;
-    &:before {
-      content: "!!";
-      margin-right: 0.5em;
-      font-size: 2.3rem;
-      vertical-align: middle;
-    }
   }
 
   label {

@@ -10,9 +10,8 @@ new Vue({
   router,
   store,
   mounted () {
-    store.dispatch('fetchStationURL').then(() => {
-      store.dispatch('fetchMeasurements')
-    })
+    store.dispatch('fetchStationURL')
+      .then(() => store.dispatch('fetchMeasurements'))
   },
   render: h => h(App)
 }).$mount('#app')

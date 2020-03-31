@@ -2,15 +2,10 @@
   <section>
     <h2 class="settings-header">Station URL</h2>
     <p class="form-help">This is the data endpoint that your Mete0rama station exposes in your home network.</p>
-    <div v-if="hasStationURL">
-      <p>You're currently fetching from <br>
-        <span class="highlight">{{stationURL}}</span></p>
+    <div>
+      <p v-if="hasStationURL">You're currently fetching from</p>
+      <p v-else>Please enter a station URL</p>
     </div>
-    <div v-else><p class="settings-note">Please enter a station URL</p></div>
-
-    <button type="button"
-            v-show="!displayingForm"
-            v-on:click="toggleForm">Update URL</button>
 
     <div v-if="displayingForm" class="form-item">
       <label>
@@ -24,6 +19,13 @@
       <button type="button"
               v-on:click="toggleForm">Done!</button>
     </div>
+    <div v-else>
+      <p><span class="highlight">{{stationURL}}</span></p>
+    </div>
+    <button type="button"
+            v-show="!displayingForm"
+            v-on:click="toggleForm">Update</button>
+
   </section>
 </template>
 
