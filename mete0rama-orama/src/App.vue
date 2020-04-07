@@ -6,7 +6,7 @@
       <router-link to="/" title="Home">
         <img svg-inline class="icon" src="./assets/icons/home-solid.svg" alt="home" />
       </router-link>
-      <router-link to="/about" title="Settings">
+      <router-link to="/settings" title="Settings">
         <img svg-inline class="icon" src="./assets/icons/cog-solid.svg" alt="settings" />
       </router-link>
     </div>
