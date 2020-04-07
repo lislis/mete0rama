@@ -17,7 +17,6 @@
 </style>
 
 <script>
-// @ is an alias to /src
 import Phenomenon from './../components/Phenomenon'
 
 export default {
