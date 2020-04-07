@@ -3,8 +3,8 @@
     <h2 class="settings-header">Station URL</h2>
     <p class="form-help">This is the data endpoint that your Mete0rama station exposes in your home network.</p>
     <div>
-      <p v-if="hasStationURL">You're currently fetching from</p>
-      <p v-else>Please enter a station URL</p>
+      <p v-if="hasStationURL">You're currently fetching from:</p>
+      <p v-else>Please enter a station URL.</p>
     </div>
 
     <div v-if="displayingForm" class="form-item">
