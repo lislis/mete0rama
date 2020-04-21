@@ -11,10 +11,10 @@ You will need these parts:
 - a breadboard
 - jumper cables
 - a power bank
-- a tupper box
+- a tupperware box
 
 Additionally you will need these for the setup:
-- a tool to cut a hole into the tupper box
+- a tool to cut a hole into the tupperware box
 - gaffa tape to fix unintentional holes in the box
 
 ## Circuit Setup
@@ -54,7 +54,7 @@ Next, just put everything into the box (except the raindrop sensor) and close th
 
 This can go outside now! Find a spot that's within your WIFI range, shady (so the temperature reading is more accurate), but will stil be hit by rain when it rains.
 
-Check your local network for `Mete0rama` (for example by checking for all local devices in your Router's configuration settings) and open the IP address in your browser (e.g. http://192.168.178.42) . This is the website served from your board! Go to `/data` (e.g. http://192.168.178.42) and get a nice JSON payload with measurements.
+Check your local network for `Mete0rama` (for example by checking for all local devices in your Router's configuration settings) and open the IP address in your browser (e.g. http://192.168.178.42) . This is the website served from your board! Go to `/data` (e.g. http://192.168.178.42/data) and get a nice JSON payload with measurements.
 
 You're done! Congrats!
 
