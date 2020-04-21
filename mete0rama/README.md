@@ -54,7 +54,7 @@ Next, just put everything into the box (except the raindrop sensor) and close th
 
 This can go outside now! Find a spot that's within your WIFI range, shady (so the temperature reading is more accurate), but will stil be hit by rain when it rains.
 
-Check your local network for `Mete0rama` (for example by checking for all local devices in your Router's configuration settings) and open the IP address in your browser. This is the website served from your board! Go to `/data` and get a nice JSON payload with measurements.
+Check your local network for `Mete0rama` (for example by checking for all local devices in your Router's configuration settings) and open the IP address in your browser (e.g. http://192.168.178.42) . This is the website served from your board! Go to `/data` (e.g. http://192.168.178.42) and get a nice JSON payload with measurements.
 
 You're done! Congrats!
 
@@ -63,3 +63,7 @@ You're done! Congrats!
 Yes, you have to charge the power bank once in a while.
 
 I'm also not sure how long a raindrop sensor like that makes it out in the wild without corrosion. We'll see.
+
+## Set up the web app
+
+Once you have this setup, you can configure the web app to have a nice display of your weather data. Move over to the [webapp setup](../mete0rama-orama/README.md)!
