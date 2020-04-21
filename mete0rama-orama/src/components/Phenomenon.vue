@@ -40,7 +40,7 @@ export default {
   margin: 0;
   font-size: 2rem;
   text-transform: uppercase;
-  color: #ccc;
+  color: #999;
   }
   .phen-body {
   margin: 0;

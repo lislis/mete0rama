@@ -8,7 +8,7 @@
 
 <style scoped lang="scss">
 .appfooter {
-  margin-top: 10vh;
+  margin-top: 15vh;
   font-size: 1.3rem;
   color: #999;
   }
