@@ -4,7 +4,7 @@ Weather station in a tupperware box.
 
 It uses your home network to expose measurements that you can use however you like.
 
-[How to get started!](./meteorama/README.md)
+### >> [How to get started!](./meteorama/README.md) <<
 
 ## Project structure
 
