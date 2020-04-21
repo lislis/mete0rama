@@ -1,20 +1,20 @@
 /*
- * Mete0rama 
- * 
+ * Mete0rama
+ *
  * Weather station in a tupper box
- * 
+ *
  * NodeMCU v3 (ESP8266)
  * BME280 sensor for temperature, humidity and pressure (using I2C).
  * And an analog raindrop sensor for precipitation.
- * 
+ *
  * Using 3.3 V
- * 
+ *
  * Raindrop sensor -> A0
  * BME SCL -> D1, SDA -> D2
- * 
+ *
  * Find local IP via Serial monitor or your home router.
  * Open the IP address in your browser :)
- * 
+ *
  */
 
 #include <ArduinoJson.h>
@@ -29,8 +29,8 @@
 #define VOLTAGE 3.3
 #define SEALEVELPRESSURE_HPA (1013.25)
 #define RAINPIN A0
-#define _SSID "PelicanTown"
-#define _PW "visitstardewvalleyin2018"
+#define _SSID "YOUR_SSID_HERE"
+#define _PW "YOUR_WIFI_PASSWORD_HERE"
 
 Adafruit_BME280 bme; // I2C
 ESP8266WebServer server(80);
@@ -38,13 +38,13 @@ ESP8266WebServer server(80);
 void setup() {
   Serial.begin(9600);
   while(!Serial);
-  
+
   WiFi.mode(WIFI_OFF);
   delay(500);
 
   // You can also pass in a Wire library object like &Wire2
   // status = bme.begin(0x76, &Wire2)
-  unsigned bmeStatus = bme.begin(0x76); 
+  unsigned bmeStatus = bme.begin(0x76);
   if (!bmeStatus) {
       printBMEStatus();
       while (1) delay(10);
@@ -78,8 +78,8 @@ void setup() {
   server.begin();
 }
 
-void loop() { 
-  server.handleClient(); 
+void loop() {
+  server.handleClient();
   // printDebug();
 }
 
@@ -89,7 +89,7 @@ void handleRoot() {
 }
 
 void handleData() {
-  StaticJsonDocument<500> doc;  
+  StaticJsonDocument<500> doc;
   JsonArray arr = doc.createNestedArray("data");
   JsonObject tObj = arr.createNestedObject();
   tObj["type"] = "temperature";
@@ -111,7 +111,7 @@ void handleData() {
   rObj["type"] = "rain";
   rObj["value"] = analogRead(RAINPIN) * VOLTAGE / 1024;
   rObj["unit"] = "V";
- 
+
   String payload;
   serializeJson(doc, payload);
   server.sendHeader("Access-Control-Allow-Origin", "*");
@@ -148,11 +148,11 @@ void printDebug() {
   float rain = analogRead(RAINPIN);
   Serial.print(rain);
   if (rain < 200.) {
-    Serial.print(" - Yes, Rain!");  
+    Serial.print(" - Yes, Rain!");
   } else if (rain < 400) {
-    Serial.print(" - A drizzel"); 
+    Serial.print(" - A drizzel");
   } else {
-    Serial.print(" - Nope.");  
+    Serial.print(" - Nope.");
   }
   Serial.println("");
   Serial.println();

@@ -1,5 +1,7 @@
 # mete0rama-orama
 
+The web app to display your weather station's data.
+
 ## Project setup
 ```
 yarn install
